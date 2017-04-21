@@ -1,0 +1,13 @@
+# log
+*.log
+
+# ide
+.vscode
+.idea
+
+# directory
+coverage
+.nyc_output
+dist
+build
+node_modules
