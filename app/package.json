@@ -42,6 +42,7 @@
     "css-loader": "^0.28.0",
     "html-webpack-plugin": "^2.28.0",
     "react-hot-loader": "3.0.0-beta.6",
+    "source-map-loader": "^0.2.1",
     "style-loader": "^0.16.1",
     "tslint": "^5.1.0",
     "tslint-eslint-rules": "^4.0.0",
