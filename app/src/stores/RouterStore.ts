@@ -1,4 +1,4 @@
-import {createBrowserHistory, History, Location} from 'history'
+import {createBrowserHistory, History, Location, LocationState} from 'history'
 
 @provideSingleton(RouterStore)
 export default class RouterStore {
@@ -21,12 +21,14 @@ export default class RouterStore {
     this.location = location
   }
 
-  push (location: Location) {
-    this.history.push(location)
+  push (path: string | Location, state?: LocationState) {
+    if (typeof path === 'string') this.history.push(path, state)
+    else this.history.push(path)
   }
 
-  replace (location: Location) {
-    this.history.replace(location)
+  replace (path: string | Location, state?: LocationState) {
+    if (typeof path === 'string') this.history.replace(path, state)
+    else this.history.replace(path)
   }
 
   go (n: number) {

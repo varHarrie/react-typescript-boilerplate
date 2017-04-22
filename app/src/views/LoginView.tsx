@@ -1,5 +1,5 @@
+import RouterStore from '../stores/RouterStore'
 import {RouteComponentProps} from 'react-router'
-import {Link} from 'react-router-dom'
 
 interface ILoginViewProps extends RouteComponentProps<{}> {
 
@@ -7,6 +7,7 @@ interface ILoginViewProps extends RouteComponentProps<{}> {
 
 @observer
 export default class LoginView extends React.Component<ILoginViewProps, void> {
+  @inject(RouterStore) routerStore: RouterStore
   @observable username: string = ''
   @observable password: string = ''
 
@@ -16,6 +17,10 @@ export default class LoginView extends React.Component<ILoginViewProps, void> {
 
   handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.password = e.target.value
+  }
+
+  handleLogin = () => {
+    this.routerStore.push('/')
   }
 
   render () {
@@ -30,7 +35,7 @@ export default class LoginView extends React.Component<ILoginViewProps, void> {
           <input type='text' placeholder='password' onChange={this.handlePasswordChange}/>
           <span>{password}</span>
         </div>
-        <Link to='/'>login</Link>
+        <button onClick={this.handleLogin}>login</button>
       </div>
     )
   }
