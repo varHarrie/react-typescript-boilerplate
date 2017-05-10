@@ -5,7 +5,8 @@
     "tslint-eslint-rules"
   ],
   "rules": {
-    "curly": false,
+"curly": false,
+    "forin": false,
     "jsx-alignment": [false],
     "jsx-boolean-value": [false],
     "jsx-no-lambda": [false],
@@ -17,17 +18,17 @@
     "member-ordering": [false],
     "no-console": [false],
     "no-empty": false,
-    "no-empty-interface": [false],
+    "no-empty-interface": false,
     "no-shadowed-variable": false,
     "no-unused-variable": [true],
     "object-curly-spacing": [true, "never"],
     "object-literal-sort-keys": false,
     "only-arrow-functions": [false],
     "ordered-imports": [false],
-    "quotemark": [true, "single", "jsx-single"],
+    "quotemark": [true,"single"],
     "semicolon": [true, "never"],
     "space-before-function-paren": [true],
     "trailing-comma": [false],
-    "variable-name": [true, "allow-leading-underscore"]
+    "variable-name": [true, "allow-leading-underscore", "allow-pascal-case"]
   }
 }
