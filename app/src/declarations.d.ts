@@ -13,6 +13,7 @@ declare global {
   const observer: typeof mobxReact.observer
   const observable: typeof mobx.observable
   const action: typeof mobx.action
+  const computed: typeof mobx.computed
   const inject: typeof IoC.inject
   const provideInstance: typeof IoC.provideInstance
   const provideSingleton: typeof IoC.provideSingleton
